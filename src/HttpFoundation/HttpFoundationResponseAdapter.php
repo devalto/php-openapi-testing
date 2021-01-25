@@ -27,6 +27,17 @@ class HttpFoundationResponseAdapter implements ResponseAdapter
         }
 
         if ($response instanceof Response) {
+            if ($response->getContent() == null) {
+                $response->setContent('');
+            }
+
+            $headers = $response->headers->all();
+            foreach ($headers as $key => $value) {
+                if ($value === [null]) {
+                    $response->headers->remove($key);
+                }
+            }
+            
             $psr17Factory   = new Psr17Factory();
             $psrHttpFactory = new PsrHttpFactory($psr17Factory, $psr17Factory, $psr17Factory, $psr17Factory);
 
