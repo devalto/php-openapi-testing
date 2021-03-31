@@ -21,9 +21,5 @@ before_script:
 
 script:
   - vendor/bin/phpcs --standard=psr12 src/
-  - vendor/bin/phpunit --coverage-text --coverage-clover=coverage.clover
+  - vendor/bin/phpunit
 
-after_script:
-  - |
-    wget https://scrutinizer-ci.com/ocular.phar
-    php ocular.phar code-coverage:upload --format=php-clover coverage.clover
