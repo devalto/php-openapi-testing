@@ -37,7 +37,7 @@ class HttpFoundationResponseAdapter implements ResponseAdapter
                     $response->headers->remove($key);
                 }
             }
-            
+
             $psr17Factory   = new Psr17Factory();
             $psrHttpFactory = new PsrHttpFactory($psr17Factory, $psr17Factory, $psr17Factory, $psr17Factory);
 
