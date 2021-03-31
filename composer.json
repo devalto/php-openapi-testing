@@ -1,5 +1,5 @@
 {
-    "name": "saritasa/openapi-httpfoundation-testing",
+    "name": "devalto/openapi-httpfoundation-testing",
     "type": "library",
     "description": "Strengthen your API tests by validating HttpFoundation responses against OpenAPI (3.0.x) definitions",
     "keywords": [
